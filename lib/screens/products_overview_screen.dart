@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../widgets/app_drawer.dart';
 import '../widgets/products_grid.dart';
-import '../widgets/badge.dart';
+import '../widgets/badge.dart' as b;
 import '../providers/cart.dart';
 import './cart_screen.dart';
 import '../providers/products.dart';
@@ -53,7 +53,8 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('MyShop'),
-        actions: <Widget>[
+        actions: <Widget>
+        [
           PopupMenuButton(
             onSelected: (FilterOptions selectedValue) {
               setState(() {
@@ -79,7 +80,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
                 ],
           ),
           Consumer<Cart>(
-            builder: (_, cart, ch) => AppBadge(
+            builder: (_, cart, ch) => b.Badge(
                   child: ch,
                   value: cart.itemCount.toString(),
                 ),

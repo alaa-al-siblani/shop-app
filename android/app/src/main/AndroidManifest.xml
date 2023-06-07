@@ -1,8 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shop_app">
    <application
-        android:label="shop_app"
+        android:label="Best Shop"
         android:name="${applicationName}"
+        android:debuggable="false"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
